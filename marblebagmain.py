@@ -123,12 +123,31 @@ print("This is the first", str(numelems), "entries:")
 for i in range(0, numelems):
     print(parr[i])
 
-
-
 # print("")
 # print("This is the last", str(numelems), "entries:")
 # for i in range(len(setarr)-1, len(setarr) - numelems - 1, -1):
 #     print(parr[i])
+
+
+
+
+import matplotlib.pyplot as plt
+
+a = []
+b = []
+
+for index, (key, value) in enumerate(dadictsorted.items()):
+    ball = float(int(key)/lim)
+    if int(ball) == 1:
+        ball = ((lim-1)/lim)
+    a.append(ball)     b.append(value)
+
+plt.scatter(a, b)
+plt.title('Appearances of Larger Split Percentages')
+plt.xlabel('Percentage Value')
+plt.ylabel('Number of Times Percentage Appears')
+plt.show()
+
 
 
 
@@ -159,25 +178,4 @@ for i in range(0, numelems):
 
 
 
-# import matplotlib.pyplot as plt
 
-# a = []
-# b = []
-
-# for index, (key, value) in enumerate(dadictsorted.items()):
-#     ball = float(int(key)/lim)
-#     if int(ball) == 1:
-#         ball = ((lim-1)/lim)
-#     a.append(ball)
-#     b.append(value)
-
-# plt.scatter(a, b)
-# plt.title('Appearances of Larger Split Percentages')
-# plt.xlabel('Percentage Value')
-# plt.ylabel('Number of Times Percentage Appears')
-# plt.show()
-
-
-
-
-# python3 ./marblebagmain.py
